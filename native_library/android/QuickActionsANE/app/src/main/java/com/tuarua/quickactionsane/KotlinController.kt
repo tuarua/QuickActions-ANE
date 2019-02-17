@@ -27,7 +27,7 @@ import com.tuarua.quickactionsane.extensions.ShortcutInfo
 
 @Suppress("unused", "UNUSED_PARAMETER", "UNCHECKED_CAST")
 class KotlinController : FreKotlinMainController {
-    // https://romannurik.github.io/AndroidAssetStudio/icons-app-shortcut.html#source.type=clipart&source.clipart=search&source.space.trim=0&source.space.pad=0&name=ic_shortcut_search&foreColor=rgb(0%2C%200%2C%200)&backColor=rgb(245%2C%20245%2C%20245)
+
     fun init(ctx: FREContext, argv: FREArgv): FREObject? {
         return true.toFREObject()
     }
