@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="QuickActionsANE" type="flex">
+    <CLASSES>
+      <root url="jar://$DOCUMENTS$/QuickActions-ANE/native_extension/ane/QuickActionsANE.ane!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="https://tuarua.github.io/asdocs/quickactionsane/index.html" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
