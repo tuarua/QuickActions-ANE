@@ -33,7 +33,6 @@ CONTEXT_INIT(TRQAA) {
     {
          MAP_FUNCTION(TRQAA, init)
         ,MAP_FUNCTION(TRQAA, setShortcutItems)
-        ,MAP_FUNCTION(TRQAA, clearShortcutItems)
         ,MAP_FUNCTION(TRQAA, getLaunchShortcut)
     };
     SET_FUNCTIONS 

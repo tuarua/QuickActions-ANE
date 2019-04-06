@@ -82,7 +82,7 @@ public class StarlingRoot extends Sprite {
         event.stopPropagation();
         var touch:Touch = event.getTouch(clearItemsBtn, TouchPhase.ENDED);
         if (touch && touch.phase == TouchPhase.ENDED) {
-            quickActions.clear();
+            quickActions.shortcutItems = new Vector.<ShortcutItem>();
         }
     }
 

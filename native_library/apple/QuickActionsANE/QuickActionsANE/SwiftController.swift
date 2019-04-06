@@ -27,11 +27,6 @@ public class SwiftController: NSObject {
         return true.toFREObject()
     }
     
-    func clearShortcutItems(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
-        UIApplication.shared.shortcutItems = []
-        return nil
-    }
-    
     func setShortcutItems(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
             let items = [UIApplicationShortcutItem](argv[0])
@@ -43,7 +38,7 @@ public class SwiftController: NSObject {
     }
     
     func getLaunchShortcut(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
-        var ret: FREObject? = nil
+        var ret: FREObject?
         if let userInfo = appDidFinishLaunchingNotification?.userInfo,
             let shortcutItem = userInfo[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             ret = shortcutItem.type.toFREObject()

@@ -19,7 +19,6 @@ extension SwiftController: FreSwiftMainController {
     // Must have this function. It exposes the methods to our entry ObjC.
     @objc public func getFunctions(prefix: String) -> [String] {
         functionsToSet["\(prefix)init"] = initController
-        functionsToSet["\(prefix)clearShortcutItems"] = clearShortcutItems
         functionsToSet["\(prefix)setShortcutItems"] = setShortcutItems
         functionsToSet["\(prefix)getLaunchShortcut"] = getLaunchShortcut
         
