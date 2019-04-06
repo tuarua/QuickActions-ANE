@@ -25,7 +25,6 @@ public class QuickActionsANE implements FREExtension {
     private static final String[] FUNCTIONS = {
              "init"
             ,"setShortcutItems"
-            ,"clearShortcutItems"
             ,"getLaunchShortcut"
     };
 

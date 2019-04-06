@@ -42,9 +42,11 @@ public class QuickActionsANE extends EventDispatcher {
         return _quickActions;
     }
 
+    /** @deprecated set shortcutItems = new Vector.<ShortcutItem>(); instead */
     public function clear():void {
         if (!safetyCheck()) return;
-        QuickActionsANEContext.context.call("clearShortcutItems");
+        var ret:* = QuickActionsANEContext.context.call("setShortcutItems", new Vector.<ShortcutItem>());
+        if (ret is ANEError) throw ret as ANEError;
     }
 
     public function get launchShortcut():String {

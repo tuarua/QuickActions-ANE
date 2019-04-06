@@ -45,16 +45,12 @@ class KotlinController : FreKotlinMainController {
             val si = ShortcutInfo(fre, appActivity) ?: continue
             items.add(si)
         }
-        appActivity.applicationContext.shortcutManager().dynamicShortcuts = items
-        return null
-    }
-
-    fun clearShortcutItems(ctx: FREContext, argv: FREArgv): FREObject? {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N_MR1) {
-            return null
+        if (items.isEmpty()) {
+            appActivity.applicationContext.shortcutManager().removeAllDynamicShortcuts()
+        } else {
+            appActivity.applicationContext.shortcutManager().dynamicShortcuts = items
         }
-        val appContext = context?.activity?.applicationContext ?: return null
-        appContext.shortcutManager().removeAllDynamicShortcuts()
+
         return null
     }
 
