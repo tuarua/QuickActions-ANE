@@ -37,14 +37,9 @@ class KotlinController : FreKotlinMainController {
             return null
         }
         val appActivity = context?.activity ?: return null
-        argv.takeIf { argv.size > 0 } ?: return FreArgException("setShortcutItems")
+        argv.takeIf { argv.size > 0 } ?: return FreArgException()
 
-        val items = mutableListOf<ShortcutInfo>()
-        val freArray = FREArray(argv[0])
-        for (fre in freArray) {
-            val si = ShortcutInfo(fre, appActivity) ?: continue
-            items.add(si)
-        }
+        val items = FREArray(argv[0]).map { ShortcutInfo(it, appActivity) }.filterNotNull()
         if (items.isEmpty()) {
             appActivity.applicationContext.shortcutManager().removeAllDynamicShortcuts()
         } else {

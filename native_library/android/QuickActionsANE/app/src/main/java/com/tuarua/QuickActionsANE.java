@@ -19,7 +19,7 @@ import com.adobe.fre.FREContext;
 import com.adobe.fre.FREExtension;
 import com.tuarua.quickactionsane.KotlinController;
 
-@SuppressWarnings({"WeakerAccess", "unused"})
+@SuppressWarnings({"WeakerAccess", "unused", "FieldCanBeLocal"})
 public class QuickActionsANE implements FREExtension {
     private String NAME = "com.tuarua.QuickActionsANE";
     private static final String[] FUNCTIONS = {
