@@ -23,7 +23,7 @@ PS get_android_dependencies.ps1
 ```xml
 <extensions>
 <extensionID>com.tuarua.frekotlin</extensionID>
-<extensionID>com.android.support.support-v4</extensionID>
+<extensionID>androidx.legacy.legacy-support-v4</extensionID>
 <extensionID>com.tuarua.QuickActionsANE</extensionID>
 ...
 </extensions>
