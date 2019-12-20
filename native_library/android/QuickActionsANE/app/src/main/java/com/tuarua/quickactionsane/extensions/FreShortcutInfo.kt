@@ -21,11 +21,11 @@ package com.tuarua.quickactionsane.extensions
 import android.app.Activity
 import android.content.pm.ShortcutInfo
 import android.os.Build
-import android.support.annotation.RequiresApi
 import com.adobe.fre.FREObject
 import com.tuarua.frekotlin.*
 import android.content.Intent
 import android.graphics.drawable.Icon
+import androidx.annotation.RequiresApi
 import com.tuarua.quickactionsane.R
 import com.tuarua.quickactionsane.ShortcutHandlerActivity
 

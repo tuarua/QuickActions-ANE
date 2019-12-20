@@ -16,13 +16,12 @@
 package com.tuarua.quickactionsane
 
 import android.content.Context
-import android.content.pm.ShortcutInfo
 import com.adobe.fre.FREContext
 import com.adobe.fre.FREObject
 import com.tuarua.frekotlin.*
 import android.content.pm.ShortcutManager
 import android.os.Build
-import android.support.annotation.RequiresApi
+import androidx.annotation.RequiresApi
 import com.tuarua.quickactionsane.extensions.ShortcutInfo
 
 @Suppress("unused", "UNUSED_PARAMETER", "UNCHECKED_CAST")

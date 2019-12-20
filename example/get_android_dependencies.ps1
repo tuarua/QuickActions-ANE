@@ -1,6 +1,6 @@
 $AneVersion = "1.4.0"
 $FreKotlinVersion = "1.9.1"
-$SupportV4Version = "27.1.0"
+$SupportV4Version = "1.0.0"
 
 $currentDir = (Get-Item -Path ".\" -Verbose).FullName
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12

@@ -6,7 +6,7 @@
     <versionNumber>1.3.0</versionNumber>
     <extensions>
         <extensionID>com.tuarua.frekotlin</extensionID>
-        <extensionID>com.android.support.support-v4</extensionID>
+        <extensionID>androidx.legacy.legacy-support-v4</extensionID>
         <extensionID>com.tuarua.QuickActionsANE</extensionID>
     </extensions>
     <initialWindow>
