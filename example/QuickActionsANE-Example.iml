@@ -59,10 +59,10 @@
             <entry library-name="QuickActionsANE" library-level="project">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-name="com.tuarua.frekotlin-1.9.1" library-level="project">
+            <entry library-name="androidx.legacy.legacy-support-v4-1.0.0" library-level="project">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-name="androidx.legacy.legacy-support-v4-1.0.0" library-level="project">
+            <entry library-name="com.tuarua.frekotlin-1.9.5" library-level="project">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -106,5 +106,6 @@
     <orderEntry type="library" exported="" name="com.tuarua.frekotlin-1.8.0" level="project" />
     <orderEntry type="library" exported="" name="com.tuarua.frekotlin-1.9.1" level="project" />
     <orderEntry type="library" exported="" name="androidx.legacy.legacy-support-v4-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="com.tuarua.frekotlin-1.9.5" level="project" />
   </component>
 </module>

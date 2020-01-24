@@ -31,7 +31,7 @@ public class SwiftController: NSObject {
         guard argc > 0,
             let items = [UIApplicationShortcutItem](argv[0])
             else {
-                return FreArgError(message: "setShortcutItems").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         UIApplication.shared.shortcutItems = items
         return nil
