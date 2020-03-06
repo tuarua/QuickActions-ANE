@@ -33,17 +33,7 @@ public extension UIApplicationShortcutItem {
 
 public extension Array where Element == UIApplicationShortcutItem {
     init?(_ freObject: FREObject?) {
-        self.init()
-        guard let rv = freObject else {
-            return
-        }
-        var ret = [UIApplicationShortcutItem]()
-        let array = FREArray(rv)
-        for item in array {
-            if let v = UIApplicationShortcutItem(item) {
-                ret.append(v)
-            }
-        }
-        self = ret
+        guard let rv = freObject else { return nil }
+        self = FREArray(rv).compactMap { UIApplicationShortcutItem($0) }
     }
 }

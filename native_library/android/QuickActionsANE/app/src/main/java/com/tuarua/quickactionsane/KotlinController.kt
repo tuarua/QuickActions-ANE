@@ -16,13 +16,12 @@
 package com.tuarua.quickactionsane
 
 import android.content.Context
-import android.content.pm.ShortcutInfo
 import com.adobe.fre.FREContext
 import com.adobe.fre.FREObject
 import com.tuarua.frekotlin.*
 import android.content.pm.ShortcutManager
 import android.os.Build
-import android.support.annotation.RequiresApi
+import androidx.annotation.RequiresApi
 import com.tuarua.quickactionsane.extensions.ShortcutInfo
 
 @Suppress("unused", "UNUSED_PARAMETER", "UNCHECKED_CAST")
@@ -37,14 +36,9 @@ class KotlinController : FreKotlinMainController {
             return null
         }
         val appActivity = context?.activity ?: return null
-        argv.takeIf { argv.size > 0 } ?: return FreArgException("setShortcutItems")
+        argv.takeIf { argv.size > 0 } ?: return FreArgException()
 
-        val items = mutableListOf<ShortcutInfo>()
-        val freArray = FREArray(argv[0])
-        for (fre in freArray) {
-            val si = ShortcutInfo(fre, appActivity) ?: continue
-            items.add(si)
-        }
+        val items = FREArray(argv[0]).map { ShortcutInfo(it, appActivity) }.filterNotNull()
         if (items.isEmpty()) {
             appActivity.applicationContext.shortcutManager().removeAllDynamicShortcuts()
         } else {

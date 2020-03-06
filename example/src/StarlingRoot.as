@@ -1,12 +1,11 @@
 package {
 
-import com.tuarua.QuickActionsANE;
+import com.tuarua.QuickActions;
 import com.tuarua.quickActions.ShortcutItem;
 import com.tuarua.quickActions.ShortcutItemIcon;
 
 import flash.desktop.NativeApplication;
 import flash.events.Event;
-import flash.utils.setInterval;
 
 import starling.display.Sprite;
 import starling.events.Touch;
@@ -21,7 +20,7 @@ public class StarlingRoot extends Sprite {
     private var setItemsBtn:SimpleButton = new SimpleButton("Set Shortcut Items");
     private var clearItemsBtn:SimpleButton = new SimpleButton("Clear Shortcut Items");
     private var statusLabel:TextField;
-    private var quickActions:QuickActionsANE;
+    private var quickActions:QuickActions;
 
     public function StarlingRoot() {
         super();
@@ -40,7 +39,7 @@ public class StarlingRoot extends Sprite {
 
     public function start():void {
         initMenu();
-        quickActions = QuickActionsANE.quickActions;
+        quickActions = QuickActions.shared();
         var launchShortcut:String = quickActions.launchShortcut;
         if (launchShortcut != null) {
             statusLabel.text = "Launch Shortcut: " + launchShortcut;
@@ -87,7 +86,7 @@ public class StarlingRoot extends Sprite {
     }
 
     private function onExiting(event:Event):void {
-        QuickActionsANE.dispose();
+        QuickActions.dispose();
     }
 
 }
