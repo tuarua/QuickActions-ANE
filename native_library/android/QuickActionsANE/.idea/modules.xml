@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/QuickActionsANE.iml" filepath="$PROJECT_DIR$/QuickActionsANE.iml" group="QuickActionsANE" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="QuickActionsANE/app" />
+      <module fileurl="file://$PROJECT_DIR$/QuickActionsANE.iml" filepath="$PROJECT_DIR$/QuickActionsANE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/QuickActionsANE.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/QuickActionsANE.app.iml" />
     </modules>
   </component>
 </project>
