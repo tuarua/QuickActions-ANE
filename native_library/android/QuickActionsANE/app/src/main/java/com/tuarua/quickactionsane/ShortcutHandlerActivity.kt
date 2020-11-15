@@ -22,7 +22,7 @@ class ShortcutHandlerActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val prefs = this.getSharedPreferences(packageName, 0)
-        prefs.edit().putString("shortcutAction", intent.action.removePrefix("$packageName.shortCut.")).apply()
+        prefs.edit().putString("shortcutAction", intent.action?.removePrefix("$packageName.shortCut.")).apply()
         finish()
     }
 }

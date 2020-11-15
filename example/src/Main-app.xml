@@ -3,7 +3,7 @@
   <id>com.tuarua.QuickActionsANE.Example</id>
   <filename>Main</filename>
   <name>QuickActionsANEExample</name>
-  <versionNumber>1.6.0</versionNumber>
+  <versionNumber>1.7.0</versionNumber>
   <extensions>
     <extensionID>com.tuarua.QuickActionsANE</extensionID>
     <extensionID>com.tuarua.frekotlin</extensionID>
